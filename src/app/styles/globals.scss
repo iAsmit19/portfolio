@@ -1,0 +1,47 @@
+// @import "tailwindcss";
+@import "./reset";
+@import "./variables";
+@import "./fonts";
+
+html,
+body {
+  background-color: $default_bg;
+  color: $default_color;
+  font-family: "uni";
+}
+
+.universal_heading {
+  height: auto;
+  width: 100%;
+
+  .universal_heading__cont {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .universal_heading__cont__backdrop_heading {
+      h2 {
+        color: $uni_head_heading;
+        font-size: 8rem;
+        font-family: "uni";
+        text-transform: uppercase;
+      }
+    }
+
+    .universal_heading__cont__sub_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      p {
+        color: $uni_head_sub_text;
+        font-family: "cur";
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

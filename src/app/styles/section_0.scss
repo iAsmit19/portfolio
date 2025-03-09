@@ -1,0 +1,201 @@
+@use "./variables";
+@use "./fonts";
+
+.section_0 {
+  // border-bottom: 1px solid #474747;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .section_0__bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    .section_0__bg__cont {
+      height: 100%;
+      width: 100%;
+
+      .bg__Cont__video {
+        // height: 100%;
+        // width: 100%;
+        // object-fit: cover;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+      }
+    }
+  }
+
+  .section_0__cont {
+    background-color: #0000005b;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+
+    .section_0__cont__skeleton {
+      position: absolute;
+      top: 0;
+      left: 300px;
+      z-index: 2;
+    }
+
+    .section_0__cont__elements {
+      // border: 1px solid #646464;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      .section_0__cont__elements__name_plate {
+        h1 {
+          background: variables.$sec0_name_bg;
+          background-size: 200% 200%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 0px 0px 10px #be88ff64;
+          font-size: 4.5rem;
+          font-family: "uni l";
+          white-space: nowrap;
+          animation: shine 11s ease-in-out infinite;
+          animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+
+          @media (max-width: 576px) {
+            font-size: 4rem;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 3.5rem;
+          }
+        }
+
+        @keyframes shine {
+          0% {
+            background-position: 200% 0;
+          }
+
+          100% {
+            background-position: -200% 0;
+          }
+        }
+      }
+
+      .section_0__cont__elements__designation_plate {
+        p {
+          color: variables.$sec0_color;
+          font-size: 1.125rem;
+          font-family: "uni";
+          white-space: nowrap;
+          margin-top: -5px;
+
+          @media (max-width: 576px) {
+            font-size: 1rem;
+          }
+
+          @media (max-width: 400px) {
+            font-size: 0.75rem;
+          }
+
+          .designation_plate__eye_on {
+            color: #9626F2;
+          }
+        }
+      }
+
+      .section_0__cont__elements__email_cta {
+        margin-top: 45px;
+
+        .section_0__cont__elements__email_cta_cont {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+
+          @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          @media (max-width: 400px) {}
+
+          &>* {
+            border: 1px solid #23232387;
+            border-radius: 6px;
+            background-color: #121212;
+            transition: all ease-in-out 150ms;
+          }
+
+          &>*:hover {
+            border: 1px solid #14012a87;
+            background-color: #232323;
+            color: #fff;
+          }
+
+          .email_cta__email_copy {
+            width: 220px;
+            padding: 7px 12px;
+            cursor: pointer;
+
+            .email_cta__email_copy__cont {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 15px;
+
+              .email_copy__cont__email_address {
+                color: #d0d0d0;
+                font-size: 0.875rem;
+                font-family: "uni l";
+                white-space: nowrap;
+
+                @media (max-width: 576px) {
+                  font-size: 0.85rem;
+                }
+              }
+            }
+          }
+
+          .email_cta__open_mail {
+
+            .email_cta__open_mail__cont {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              padding: 7px 12px;
+
+              .open_mail__cont__text {
+                p {
+                  color: #d0d0d0;
+                  font-size: 0.875rem;
+                  font-family: "uni l";
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
