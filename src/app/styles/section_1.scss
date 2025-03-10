@@ -1,37 +1,48 @@
 @use "./variables";
 @use "./fonts";
 
-.sectio_1 {
-  min-height: 100vh;
+.section_1 {
+  min-height: 200vh;
   width: 100%;
+  margin-top: 40vh;
+  padding-bottom: 15vh;
 
   .section_1__cont {
-    // border: 1px solid grey;
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .section_1__cont__part_a {
+      // border: 1px solid white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       .section_1__cont__cards {
+        position: relative;
+        z-index: 2;
 
         .section_1__cont__cards__cont {
           display: flex;
           flex-direction: column;
           gap: 60px;
           padding: 60px;
+          padding-bottom: 15vh;
+          z-index: 2;
         }
       }
     }
 
-    // .section_1__cont__part_b {
+    .section_1__cont__part_b {
+      border: 1px solid pink;
+      width: 100%;
 
-    //   .section_1__cont__bento_grid {
-
-    //     .section_1__cont__bento_grid__cont {}
-    //   }
-    // }
+      // .section_1__cont__bento_grid {}
+    }
   }
 }

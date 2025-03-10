@@ -26,6 +26,7 @@ const ProjectCard: React.FC<ProjectType> = ({ project }) => {
             <div className="project_card__cont__info__thumbnail">
               <div className="project_card__cont__info__thumbnail__cont">
                 <Image
+                  priority
                   src={project.thumbPath}
                   alt=""
                   height={140}

@@ -1,7 +1,12 @@
+"use client";
+
 import "@/app/styles/section_1.scss";
 import UniversalHeading from "./UniversalHeading";
 import { projectData } from "../data/p_d";
 import ProjectCard from "./ProjectCard";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface Project {
   id: number;
@@ -14,19 +19,42 @@ interface Project {
 
 const Section_1 = () => {
   const projects: Project[] = projectData;
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  const cardsContRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (!headingRef.current || !cardsContRef.current) return;
+
+    const heading = headingRef.current;
+    const cardsCont = cardsContRef.current;
+
+    gsap.to(heading, {
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 50%",
+        end: () => `+=${cardsCont.scrollHeight}`,
+        pin: true,
+        // markers: true,
+        pinSpacing: false,
+        scrub: 5,
+      },
+    });
+  }, []);
 
   return (
     <>
-      <div className="sectio_1">
+      <div className="section_1">
         <div className="section_1__cont">
           <div className="section_1__cont__part_a">
-            <div className="section_1__cont__header">
+            <div className="section_1__cont__header" ref={headingRef}>
               <UniversalHeading
                 head="work"
                 subText="these are my projects & works"
               />
             </div>
-            <div className="section_1__cont__cards">
+            <div className="section_1__cont__cards" ref={cardsContRef}>
               <div className="section_1__cont__cards__cont">
                 {projects.map((project) => (
                   <ProjectCard key={project.id} project={project} />

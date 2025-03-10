@@ -31,3 +31,12 @@ export const projectData = [
     bgColor: "#f5f6ff",
   },
 ];
+
+export const componentData = [
+  {
+    id: 0,
+    title: "Cursor Finder",
+    url: "https://codepen.io/Asmit-Singh/details/LEYLNEJ",
+    thumbPath: "/component-videos/cursor-finder"
+  },
+];
