@@ -2,10 +2,20 @@
 @use "./fonts";
 
 .section_1 {
-  min-height: 200vh;
+  // border: 1px solid white;
+  min-height: 100vh;
   width: 100%;
-  margin-top: 40vh;
-  padding-bottom: 15vh;
+  margin-top: 20vh;
+  padding-bottom: 25vh;
+  position: relative;
+
+  @media (max-width: 576px) {
+    margin-top: 10vh;
+    padding-bottom: 20vh;
+    // padding-bottom: 5vh;
+  }
+
+  @media (max-width: 576px) {}
 
   .section_1__cont {
     height: 100%;
@@ -34,15 +44,27 @@
           padding: 60px;
           padding-bottom: 15vh;
           z-index: 2;
+
+          @media (max-width: 576px) {
+            align-items: center;
+            padding: 0;
+          }
         }
       }
     }
+  }
+}
 
-    .section_1__cont__part_b {
-      border: 1px solid pink;
-      width: 100%;
+.section_0__cont__skeleton {
+  position: absolute;
+  top: -20vh;
+  left: 300px;
+  z-index: 2;
 
-      // .section_1__cont__bento_grid {}
-    }
+  @media (max-width: 576px) {
+    align-items: center;
+    padding: 0;
+    top: -10vh;
+    left: 0;
   }
 }

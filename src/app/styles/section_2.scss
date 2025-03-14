@@ -1,0 +1,67 @@
+@use "./variables";
+@use "./fonts";
+
+.section_2 {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .section_2__cont {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .section_2__cont__heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .section_2__cont__skills {
+      // border: 1px solid white;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 2;
+
+      .section_2__cont__skills__cont {
+        // border: 1px solid cyan;
+        // height: 100%;
+        // width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6rem;
+
+        &>div {
+          // border: 1px solid green;
+
+          h4 {
+            color: #606060;
+            font-family: "uni b";
+            font-size: 0.8rem;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+
+            li {
+              color: #f9f9f9;
+              font-family: "uni t";
+              font-size: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

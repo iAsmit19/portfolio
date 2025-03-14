@@ -7,6 +7,8 @@ import ProjectCard from "./ProjectCard";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import skeletonImg from "@/app/assets/skeleton.svg";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -17,8 +19,18 @@ interface Project {
   bgColor: string;
 }
 
+// interface Component {
+//   id: number;
+//   title: string;
+//   url: string;
+//   thumbPath: string;
+//   height: number;
+//   width: number;
+// }
+
 const Section_1 = () => {
   const projects: Project[] = projectData;
+
   const headingRef = useRef<HTMLDivElement | null>(null);
   const cardsContRef = useRef<HTMLDivElement | null>(null);
 
@@ -34,9 +46,8 @@ const Section_1 = () => {
       scrollTrigger: {
         trigger: heading,
         start: "top 50%",
-        end: () => `+=${cardsCont.scrollHeight}`,
+        end: () => `+=${cardsCont.scrollHeight * 1.15}`,
         pin: true,
-        // markers: true,
         pinSpacing: false,
         scrub: 5,
       },
@@ -46,6 +57,15 @@ const Section_1 = () => {
   return (
     <>
       <div className="section_1">
+        <div className="section_0__cont__skeleton">
+          <Image
+            src={skeletonImg}
+            alt=""
+            height={130}
+            width={100}
+            draggable="false"
+          />
+        </div>
         <div className="section_1__cont">
           <div className="section_1__cont__part_a">
             <div className="section_1__cont__header" ref={headingRef}>
@@ -62,11 +82,7 @@ const Section_1 = () => {
               </div>
             </div>
           </div>
-          <div className="section_1__cont__part_b">
-            <div className="section_1__cont__bento_grid">
-              <div className="section_1__cont__bento_grid__cont"></div>
-            </div>
-          </div>
+          <div className="section_1__cont__part_b"></div>
         </div>
       </div>
     </>

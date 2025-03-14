@@ -50,6 +50,8 @@ const Sec0_Cta = () => {
             <a
               className="email_cta__open_mail__cont"
               href="mailto:iamasmit1919@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {/* <div className="open_mail__cont__icon"> */}
               <Image src={mailIcon} alt="" height={15} width={15} />

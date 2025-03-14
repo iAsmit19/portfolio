@@ -1,6 +1,7 @@
 import Image from "next/image";
 import linkIcon from "@/app/assets/link-arrow.svg";
 import liveIcon from "@/app/assets/link-icon.svg";
+import sLinkArrow from "@/app/assets/s-link-arrow.svg";
 import "@/app/styles/project_card.scss";
 
 type ProjectType = {
@@ -26,11 +27,12 @@ const ProjectCard: React.FC<ProjectType> = ({ project }) => {
             <div className="project_card__cont__info__thumbnail">
               <div className="project_card__cont__info__thumbnail__cont">
                 <Image
-                  priority
                   src={project.thumbPath}
                   alt=""
-                  height={140}
-                  width={420}
+                  // height={140}
+                  // width={420}
+                  fill
+                  priority
                 />
               </div>
             </div>
@@ -39,6 +41,13 @@ const ProjectCard: React.FC<ProjectType> = ({ project }) => {
                 <div className="about__cont__header">
                   <div className="about__cont__heading">
                     <h3>{project.title}</h3>
+                    <Image
+                      className="heading__link__icon"
+                      src={sLinkArrow}
+                      alt=""
+                      height={10}
+                      width={10}
+                    />
                   </div>
                   <div className="about__cont__description">
                     <p>{project.description}</p>

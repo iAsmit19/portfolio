@@ -25,9 +25,19 @@ body {
     .universal_heading__cont__backdrop_heading {
       h2 {
         color: $uni_head_heading;
-        font-size: 8rem;
+        // font-size: 8rem;
+        font-size: 13rem;
         font-family: "uni";
         text-transform: uppercase;
+
+        @media (max-width: 576px) {
+          font-size: 7rem;
+        }
+
+        @media (max-width: 400px) {
+          // margin-top: 4vh;
+          // padding-bottom: 5vh;
+        }
       }
     }
 
@@ -40,7 +50,13 @@ body {
       p {
         color: $uni_head_sub_text;
         font-family: "cur";
-        font-size: 0.875rem;
+        // font-size: 0.875rem;
+        font-size: 1.6rem;
+        white-space: nowrap;
+
+        @media (max-width: 576px) {
+          font-size: 0.6rem;
+        }
       }
     }
   }
