@@ -19,6 +19,10 @@
       transform: translate(-50%, -50%) scale(2);
       opacity: 0.5;
       z-index: 1;
+
+      @media (max-width: 576px) {
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
 
     .section_2__cont__skills {
@@ -40,6 +44,10 @@
         align-items: flex-start;
         gap: 6rem;
 
+        @media (max-width: 576px) {
+          gap: 16%;
+        }
+
         &>div {
           // border: 1px solid green;
 
@@ -47,6 +55,10 @@
             color: #606060;
             font-family: "uni b";
             font-size: 0.8rem;
+
+            @media (max-width: 576px) {
+              font-size: 0.6rem;
+            }
           }
 
           ul {
@@ -58,6 +70,10 @@
               color: #f9f9f9;
               font-family: "uni t";
               font-size: 1.75rem;
+
+              @media (max-width: 576px) {
+                font-size: 1rem;
+              }
             }
           }
         }
