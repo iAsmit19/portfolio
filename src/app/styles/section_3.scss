@@ -31,13 +31,13 @@
       }
 
       p {
-        color: #fff;
+        color: #e0e0e0;
         font-family: "uni l";
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
 
         @media (max-width: 576px) {
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       }
     }

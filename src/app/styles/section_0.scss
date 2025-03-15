@@ -21,10 +21,6 @@
       width: 100%;
 
       .bg__Cont__video {
-        // height: 100%;
-        // width: 100%;
-        // object-fit: cover;
-
         position: absolute;
         top: 50%;
         left: 50%;
@@ -69,12 +65,12 @@
           animation: shine 11s ease-in-out infinite;
           animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 
-          @media (max-width: 576px) {
-            font-size: 4rem;
-          }
-
           @media (max-width: 400px) {
             font-size: 3.5rem;
+          }
+
+          @media (max-width: 576px) {
+            font-size: 4rem;
           }
         }
 
