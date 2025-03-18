@@ -73,5 +73,3 @@ const Section_4 = () => {
 };
 
 export default Section_4;
-
-// 48px
