@@ -65,8 +65,8 @@
           animation: shine 11s ease-in-out infinite;
           animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 
-          @media (max-width: 500px) {
-            font-size: 3rem;
+          @media (max-width: 400px) {
+            font-size: 3.5rem;
           }
 
           @media (max-width: 576px) {
