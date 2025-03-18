@@ -19,15 +19,6 @@ interface Project {
   bgColor: string;
 }
 
-// interface Component {
-//   id: number;
-//   title: string;
-//   url: string;
-//   thumbPath: string;
-//   height: number;
-//   width: number;
-// }
-
 const Section_1 = () => {
   const projects: Project[] = projectData;
 

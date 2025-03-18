@@ -5,6 +5,10 @@
   height: 70vh;
   width: 100%;
 
+  @media (max-width: 576px) {
+    height: 50vh;
+  }
+
   .section_3__cont {
     height: 100%;
     width: 100%;

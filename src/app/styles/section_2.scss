@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 576px) {
+    height: 70vh;
+  }
+
   .section_2__cont {
     height: 100%;
     width: 100%;

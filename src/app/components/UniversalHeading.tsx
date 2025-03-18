@@ -1,7 +1,7 @@
 import "../styles/globals.scss";
 
 type UniProps = {
-  head: string;
+  head?: string;
   subText?: string;
 };
 
