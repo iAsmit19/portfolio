@@ -1,13 +1,13 @@
 import "@/app/styles/section_0.scss";
 import Sec0_Cta from "./Sec0_Cta";
-import Sec0Background from "./Sec0Background";
+// import Sec0Background from "./Sec0Background";
 
 const Section_0 = () => {
   return (
     <>
       <div className="section_0">
         <div className="section_0__bg">
-          <Sec0Background />
+          {/* <Sec0Background /> */}
         </div>
         <div className="section_0__cont">
           <div className="section_0__cont__elements">

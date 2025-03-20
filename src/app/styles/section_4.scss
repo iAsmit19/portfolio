@@ -8,7 +8,8 @@
   overflow: hidden;
 
   @media (max-width: 576px) {
-    height: 90vh;
+    height: 80vh;
+    margin-bottom: 2vh;
   }
 
   .section_4__cont {
@@ -75,11 +76,11 @@
     }
 
     .section_4__cont__pin_images {
-      height: 70%;
+      height: 65%;
       width: 100%;
 
       @media (max-width: 576px) {
-        height: 80%;
+        height: 70%;
       }
 
       .section_4__cont__pin_images__cont {
@@ -177,6 +178,8 @@
       color: #7e7e7e;
       font-size: 0.9rem;
       text-align: center;
+      z-index: 3;
+      position: relative;
 
       @media (max-width: 576px) {
         font-size: 0.6rem;
