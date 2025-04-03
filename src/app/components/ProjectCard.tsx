@@ -9,6 +9,7 @@ type ProjectType = {
   project: {
     id: number;
     pageId: number;
+    liveLink: string;
     title: string;
     description: string;
     tech: string[];
@@ -79,8 +80,15 @@ const ProjectCard: React.FC<ProjectType> = ({ project }) => {
             </div>
           </div>
           <div className="project_card__cont__divider"></div>
-          <div className="project_card__cont__live_link">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+          <div
+            className="project_card__cont__live_link"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="live_link_element">
                 {" "}
                 <Image src={liveIcon} alt="" height={18} width={18} />
