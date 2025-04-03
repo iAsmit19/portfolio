@@ -17,6 +17,8 @@ const Footer = () => {
     }
   };
 
+  const copyrightYear = new Date().getFullYear();
+
   return (
     <div className="footer">
       <div className="footer__cont">
@@ -59,7 +61,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="elements__cont__copyright">
-              <p className="copyright__text">©2025 ASMIT SINGH</p>
+              <p className="copyright__text">©{copyrightYear} ASMIT SINGH</p>
             </div>
           </div>
         </div>

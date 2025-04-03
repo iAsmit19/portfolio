@@ -5,6 +5,7 @@ export const email: string = "iamasmit1919@gmail.com";
 export const projectData = [
   {
     id: 0,
+    pageId: 1615182061512915,
     title: "Asmit's (Me) Portfolio",
     description:
       "Designed and Developed this Portfolio to showcase my projects Recursion it is (lol).",
@@ -14,6 +15,7 @@ export const projectData = [
   },
   {
     id: 1,
+    pageId: 325168518,
     title: "Cypher Notes App",
     description:
       "Cypher, a full-stack notes app built with Next.js and Backend API Integration.",
@@ -23,6 +25,7 @@ export const projectData = [
   },
   {
     id: 2,
+    pageId: 122124211825,
     title: "Luxury Pulse Redesigned",
     description:
       "Redesigned a luxury marketplace to acknowledge the UI/UX issues on the original site.",

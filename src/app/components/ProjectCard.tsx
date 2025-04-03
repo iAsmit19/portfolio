@@ -3,10 +3,12 @@ import linkIcon from "@/app/assets/link-arrow.svg";
 import liveIcon from "@/app/assets/link-icon.svg";
 import sLinkArrow from "@/app/assets/s-link-arrow.svg";
 import "@/app/styles/project_card.scss";
+import { useRouter } from "next/navigation";
 
 type ProjectType = {
   project: {
     id: number;
+    pageId: number;
     title: string;
     description: string;
     tech: string[];
@@ -16,11 +18,18 @@ type ProjectType = {
 };
 
 const ProjectCard: React.FC<ProjectType> = ({ project }) => {
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push(`/projects/${project.pageId}`);
+  };
+
   return (
     <>
       <div
         className="project_card"
         style={{ backgroundColor: project.bgColor }}
+        onClick={handleCardClick}
       >
         <div className="project_card__cont">
           <div className="project_card__cont__info">

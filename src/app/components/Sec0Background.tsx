@@ -6,13 +6,6 @@ import "../styles/section_0.scss";
 const Sec0Background = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // useEffect(() => {
-  //   if (videoRef.current) {
-  //     videoRef.current.play();
-  //     videoRef.current.playbackRate = 0.2;
-  //   }
-  // }, []);
-
   return (
     <div className="section_0__bg__cont">
       <video
