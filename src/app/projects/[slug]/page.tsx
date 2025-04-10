@@ -1,4 +1,5 @@
 import { projectData } from "@/app/data/p_d";
+import { notFound } from "next/navigation";
 
 interface Project {
   id: number;
@@ -22,13 +23,7 @@ export default async function Page({
     (project) => project.slug === slug
   );
 
-  if (!project) {
-    return (
-      <div>
-        <h1>Not Found</h1>
-      </div>
-    );
-  }
+  if (!project) notFound();
 
   return (
     <div>

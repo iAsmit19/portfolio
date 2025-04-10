@@ -6,7 +6,7 @@ export const projectData = [
   {
     id: 0,
     slug: "asmits-portfolio",
-    liveLink: "https://iamasmit.vercel.app/",
+    liveLink: "https://asmit.design/",
     title: "Asmit's (Me) Portfolio",
     description:
       "Designed and Developed this Portfolio to showcase my projects Recursion it is (lol).",
