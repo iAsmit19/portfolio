@@ -1,9 +1,9 @@
 import { projectData } from "@/app/data/p_d";
-import { notFound } from "next/navigation";
 
 interface Project {
   id: number;
-  pageId: number;
+  slug: string;
+  liveLink: string;
   title: string;
   description: string;
   tech: string[];
@@ -11,20 +11,28 @@ interface Project {
   bgColor: string;
 }
 
-const Projects = ({ params }: { params: { slug: string } }) => {
-  const projects: Project[] = projectData;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-  const project: Project | undefined = projects.find(
-    (project) => project.pageId === parseInt(params.slug)
+  const project: Project | undefined = projectData.find(
+    (project) => project.slug === slug
   );
 
-  if (!project) return notFound();
+  if (!project) {
+    return (
+      <div>
+        <h1>Not Found</h1>
+      </div>
+    );
+  }
 
   return (
     <div>
       <h1>{project.title}</h1>
     </div>
   );
-};
-
-export default Projects;
+}

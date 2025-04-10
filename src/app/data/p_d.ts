@@ -5,7 +5,7 @@ export const email: string = "iamasmit1919@gmail.com";
 export const projectData = [
   {
     id: 0,
-    pageId: 1615182061512915,
+    slug: "asmits-portfolio",
     liveLink: "https://iamasmit.vercel.app/",
     title: "Asmit's (Me) Portfolio",
     description:
@@ -16,7 +16,7 @@ export const projectData = [
   },
   {
     id: 1,
-    pageId: 325168518,
+    slug: "cypher-notes",
     liveLink: "https://cypher-notes-plus.vercel.app/",
     title: "Cypher Notes App",
     description:
@@ -27,7 +27,7 @@ export const projectData = [
   },
   {
     id: 2,
-    pageId: 122124211825,
+    slug: "luxury-pulse",
     liveLink: "https://luxury-pulse-redesign-re.vercel.app/",
     title: "Luxury Pulse Redesigned",
     description:

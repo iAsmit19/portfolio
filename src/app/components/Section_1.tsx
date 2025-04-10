@@ -12,7 +12,8 @@ import Image from "next/image";
 
 interface Project {
   id: number;
-  pageId: number;
+  slug: string;
+  liveLink: string;
   title: string;
   description: string;
   tech: string[];

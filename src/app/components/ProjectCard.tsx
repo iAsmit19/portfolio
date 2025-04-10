@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 type ProjectType = {
   project: {
     id: number;
-    pageId: number;
+    slug: string;
     liveLink: string;
     title: string;
     description: string;
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectType> = ({ project }) => {
   const router = useRouter();
 
   const handleCardClick = () => {
-    router.push(`/projects/${project.pageId}`);
+    router.push(`/projects/${project.slug}`);
   };
 
   return (
